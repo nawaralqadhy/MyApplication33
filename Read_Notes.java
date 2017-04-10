@@ -19,7 +19,7 @@ public class Read_Notes extends Activity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.read);
 
-        //read the file and set the text of the textview
+        //read the file and set the text of the textviewz
 
         BufferedReader reader = null;
 

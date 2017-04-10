@@ -54,7 +54,7 @@ public class Note extends Activity{
                     writer.close();
 
                     // go to ReadActivity to read the file
-                    //gotoRead();
+                    //gotoRead();z
 
                 } catch (FileNotFoundException e) {
                     // TODO Auto-generated catch block

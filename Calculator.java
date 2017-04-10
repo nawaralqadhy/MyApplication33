@@ -1,9 +1,8 @@
 package com.example.nawaralqadhy.myapplication;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 
 public class Calculator extends AppCompatActivity {
@@ -21,7 +20,7 @@ public class Calculator extends AppCompatActivity {
         setContentView(R.layout.activity_calculator);
         showResult = (EditText) findViewById(R.id.result_id);
 
-    }
+    }// n
 
     public void btn1Clicked(View v){
         insert(1);

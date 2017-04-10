@@ -8,7 +8,7 @@ import android.widget.Toast;
 
 public class Calender extends AppCompatActivity {
     CalendarView simpleCalendarView;
-// Nawar Alqadhy
+// Nawar Alqadhy n
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

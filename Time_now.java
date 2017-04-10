@@ -14,7 +14,7 @@ public class Time_now extends Activity{
         setContentView(R.layout.activity_time);
         TextView tv;
         tv = (TextView) findViewById(R.id.time_display);
-        //time using simpledateformat
+        //time using simpledateformat z
         SimpleDateFormat df = new SimpleDateFormat("EEE, d MMM yyyy, HH:mm");
         //getting date into string
         String s = df.format(Calendar.getInstance().getTime());
