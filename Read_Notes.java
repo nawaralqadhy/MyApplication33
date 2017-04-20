@@ -1,15 +1,23 @@
 package com.example.nawaralqadhy.myapplication;
 
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.io.PrintWriter;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
-
-import java.io.BufferedReader;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import android.widget.Toast;
 
 public class Read_Notes extends Activity{
 
@@ -19,7 +27,7 @@ public class Read_Notes extends Activity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.read);
 
-        //read the file and set the text of the textviewz
+        //read the file and set the text of the textview
 
         BufferedReader reader = null;
 
@@ -47,6 +55,26 @@ public class Read_Notes extends Activity{
             e.printStackTrace();
         }
 
+        //clear the file
+        final String text = "";
+        Button button = (Button) findViewById(R.id.clear);
+        button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+
+                try {
+                    FileOutputStream fileout=openFileOutput("notes",0); //false will set the append mode to false
+                    OutputStreamWriter outputWriter=new OutputStreamWriter(fileout);
+                    outputWriter.write(text);
+                    outputWriter.close();
+                    Toast.makeText(getApplicationContext(), "file cleared successfully",
+                            Toast.LENGTH_LONG).show();
+                    TextView m = (TextView) findViewById(R.id.notes);
+                    m.setText("");
+                }catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        });
     }
 
     @Override
